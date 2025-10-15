@@ -1,10 +1,158 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>TaskMate</title>
-    <link rel="stylesheet" href="stile.css">
-  </head>
-  <body>
-    <h1>TaskMate - One click, One task</h1>
-  </body>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskMate - Progetto</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <h1>TaskMate</h1>
+      <p class="subtitle">La piattaforma che collega chi ha tempo con chi ha bisogno di aiuto</p>
+      <nav class="nav">
+        <a href="#descrizione">Descrizione</a>
+        <a href="#obiettivi">Obiettivi</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="descrizione" class="section">
+      <div class="container">
+        <h2>Descrizione del progetto</h2>
+        <p>
+          <strong>TaskMate</strong> è una piattaforma digitale pensata per mettere in contatto persone
+          che hanno del tempo libero con chi ha bisogno di aiuto nello svolgimento di piccoli lavori
+          o commissioni. L’obiettivo è creare un servizio accessibile e intuitivo, che favorisca
+          la collaborazione, la solidarietà e la condivisione di competenze nella comunità locale.
+        </p>
+        <p>
+          Gli utenti possono registrarsi, proporre le proprie disponibilità o richiedere assistenza
+          per attività quotidiane come giardinaggio, spesa, pulizie, assistenza informatica o altro.
+          La semplicità d’uso e la trasparenza sono al centro dell’esperienza, garantendo sicurezza
+          e affidabilità a entrambe le parti.
+        </p>
+      </div>
+    </section>
+
+    <section id="obiettivi" class="section alt">
+      <div class="container">
+        <h2>Obiettivi</h2>
+        <ul>
+          <li>Favorire l’incontro tra domanda e offerta di tempo e competenze.</li>
+          <li>Creare un ambiente sicuro e affidabile per lo scambio di servizi.</li>
+          <li>Promuovere la solidarietà e il supporto reciproco tra cittadini.</li>
+          <li>Offrire una piattaforma semplice, veloce e accessibile da qualsiasi dispositivo.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contatti" class="footer">
+    <div class="container">
+      <p>© 2025 TaskMate — Progetto a cura di Martino Centomo</p>
+      <p>Contattaci: <a href="mailto:info@taskmate.it">info@taskmate.it</a></p>
+    </div>
+  </footer>
+
+</body>
 </html>
+🎨 assets/css/styles.css
+css
+Copia codice
+:root {
+  --bg: #f8f9fa;
+  --text: #222;
+  --accent: #0078ff;
+  --light: #ffffff;
+  --radius: 10px;
+  --shadow: 0 4px 10px rgba(0,0,0,0.05);
+  --max-width: 900px;
+  --transition: 0.3s ease;
+  --font: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* Reset base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font);
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Header */
+.header {
+  background-color: var(--light);
+  box-shadow: var(--shadow);
+  padding: 2rem 1rem;
+  text-align: center;
+  border-bottom: 3px solid var(--accent);
+}
+.header h1 {
+  font-size: 2rem;
+  color: var(--accent);
+}
+.header .subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+.nav {
+  margin-top: 1rem;
+}
+.nav a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 500;
+  margin: 0 10px;
+  transition: color var(--transition);
+}
+.nav a:hover {
+  color: #005fcc;
+}
+
+/* Section base */
+.section {
+  padding: 3rem 1rem;
+}
+.section.alt {
+  background-color: #eef3f8;
+}
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.section h2 {
+  color: var(--accent);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.section p, .section li {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+.section ul {
+  list-style: disc inside;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--light);
+  border-top: 2px solid var(--accent);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+.footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
